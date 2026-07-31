@@ -1,0 +1,390 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', Arial, sans-serif;
+}
+
+
+body{
+    background:#f5f6fa;
+    color:#333;
+}
+
+
+
+/* CABEÇALHO */
+
+header{
+
+    background:
+    linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+
+    color:white;
+
+    text-align:center;
+
+    padding:60px 20px;
+
+}
+
+
+header h1{
+
+    font-size:45px;
+
+    letter-spacing:1px;
+
+}
+
+
+header p{
+
+    margin-top:15px;
+
+    font-size:20px;
+
+    color:#ddd;
+
+}
+
+
+
+/* MENU */
+
+nav{
+
+    background:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    padding:18px;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
+
+}
+
+
+nav a{
+
+    text-decoration:none;
+
+    color:#203a43;
+
+    text-align:center;
+
+    font-weight:bold;
+
+    padding:10px 20px;
+
+    border-radius:20px;
+
+    transition:.3s;
+
+}
+
+
+nav a:hover{
+
+    background:#203a43;
+
+    color:white;
+
+}
+
+
+
+/* ÁREA PRINCIPAL */
+
+main{
+
+    width:1000px;
+
+    max-width:90%;
+
+    margin:40px auto;
+
+    text-align:center;
+
+}
+
+
+
+/* CARDS */
+
+section{
+
+    background:white;
+
+    padding:35px;
+
+    margin-bottom:30px;
+
+    border-radius:15px;
+
+    box-shadow:
+
+    0 10px 25px rgba(0,0,0,.1);
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+
+
+section:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+
+/* TÍTULOS */
+
+h2{
+
+    color:#203a43;
+
+    font-size:30px;
+
+    margin-bottom:20px;
+
+    text-align:center;
+
+}
+
+
+h2::after{
+
+    content:"";
+
+    display:block;
+
+    width:70px;
+
+    height:4px;
+
+    background:#00a8ff;
+
+    margin:10px auto;
+
+    border-radius:5px;
+
+    text-align:center;
+
+}
+
+
+
+/* IMAGEM */
+
+img{
+
+    width:220px;
+
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:6px solid #00a8ff;
+
+    margin:20px;
+
+    display:block;
+    
+    margin-left:auto;
+
+    margin-right:auto;
+
+}
+
+
+
+/* TEXTOS */
+
+p{
+
+    font-size:18px;
+
+    line-height:1.7;
+
+    text-align:center;
+
+}
+
+
+
+ul{
+
+    list-style:none;
+
+    text-align:center;
+
+}
+
+
+
+li{
+
+    background:#f1f2f6;
+
+    margin:12px;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    border-left:5px solid #00a8ff;
+
+
+}
+
+
+
+/* FORMULÁRIO */
+
+form{
+
+    width:450px;
+
+    max-width:100%;
+
+    margin:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    text-align:left;
+
+    text-align:center;
+
+}
+
+
+
+label{
+
+    font-weight:bold;
+
+    margin-top:15px;
+
+
+}
+
+
+input{
+
+    padding:14px;
+
+    margin-top:6px;
+
+    border:1px solid #ccc;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+}
+
+
+input:focus{
+
+    outline:none;
+
+    border-color:#00a8ff;
+
+    box-shadow:0 0 8px rgba(0,168,255,.4);
+
+}
+
+
+
+/* BOTÃO */
+
+button{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    padding:14px;
+
+    background:
+
+    linear-gradient(135deg,#00a8ff,#0077ff);
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+button:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+
+/* MENSAGEM JS */
+
+#mensagem{
+
+    margin-top:20px;
+
+    font-weight:bold;
+
+}
+
+
+
+/* RODAPÉ */
+
+footer{
+
+    background:#111;
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+
+    margin-top:40px;
+
+}
+
+
+
+footer p{
+
+    font-size:16px;
+
+}
+
+#interesse li {
+    background:#f1f2f6;
+    width: 50%;
+    margin-left:25%;
+}
