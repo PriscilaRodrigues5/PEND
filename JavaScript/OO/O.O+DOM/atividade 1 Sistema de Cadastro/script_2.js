@@ -13,28 +13,41 @@ class Produto {
 
 class Estoque {
     constructor() {
-        const produtos = [];
+        this.produtos = [];
     }
 
     adicionarProduto(produto) {
         this.produtos.push(produto);
     }
 
-    exibir() {
+    excluirProduto(indice) {
+        this.produtos.splice(indice, 1);
+        this.exibirNaTela();
+    }
+
+    exibirNaTela() {
         const resultado = document.querySelector("#resultado");
 
         resultado.innerHTML = "";
 
         this.produtos.forEach(produto => {
+
             resultado.innerHTML += `
-            <div>
-                <p>Nome: ${produto.nome}</p>
-                <p>Preço: ${produto.preco}</p>
-                <p>Categoria: ${produto.categoria}</p>
-                <p>Desconto: ${produto.desconto}%</p>
+            <div class="produto">
+                <p><strong>Nome:</strong> ${produto.nome}</p>
+                <p><strong>Preço:</strong> ${produto.preco}</p>
+                <p><strong>Categoria:</strong> ${produto.categoria}</p>
+                <p><strong>Desconto:</strong> ${produto.desconto}%</p>
+
+                <button type="button" onclick="estoque.excluirProduto(${this.produtos.indexOf(produto)})">
+                    Excluir
+                </button>
+
+                <hr>
             </div>
         `;
         });
+
     }
 }
 
@@ -44,12 +57,35 @@ const preco = document.querySelector("#preco");
 const categoria = document.querySelector("#categoria");
 const desconto = document.querySelector("#desconto");
 
+const botaoCadastrar = document.querySelector("#botaoCadastrar");
+
 botaoCadastrar.addEventListener("click", function () {
 
-    const produto = new Produto(nome.value, parseFloat(preco.value), categoria.value, parseFloat(desconto.value));
-    // produto.aplicarDesconto();
-    // produto.exibir();
-    estoque.adicionarProduto(produto);
-    estoque.exibirProdutos();
+    if (
+        nome.value.trim() === "" ||
+        preco.value === "" ||
+        categoria.value.trim() === "" ||
+        desconto.value === ""
+    ) {
+        alert("Preencha todos os campos!");
+        return;
+    }
 
+    const produto = new Produto(
+        nome.value.trim(),
+        Number(preco.value),
+        categoria.value.trim(),
+        Number(desconto.value)
+    );
+
+    estoque.adicionarProduto(produto);
+
+    estoque.exibirNaTela();
+
+    nome.value = "";
+    preco.value = "";
+    categoria.value = "";
+    desconto.value = "";
+
+    nome.focus();
 });
