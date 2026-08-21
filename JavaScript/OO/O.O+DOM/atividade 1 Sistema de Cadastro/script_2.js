@@ -14,14 +14,40 @@ class Produto {
 class Estoque {
     constructor() {
         this.produtos = [];
+
+        // Recupera os produtos salvos
+        this.carregarProdutos();
     }
 
     adicionarProduto(produto) {
         this.produtos.push(produto);
+
+        // Salva no localStorage
+        this.salvarProdutos();
+
+        this.exibirNaTela();
     }
 
     excluirProduto(indice) {
         this.produtos.splice(indice, 1);
+
+        // Atualiza o localStorage
+        this.salvarProdutos();
+
+        this.exibirNaTela();
+    }
+
+    salvarProdutos() {
+        localStorage.setItem("produtos", JSON.stringify(this.produtos));
+    }
+
+    carregarProdutos() {
+        const produtosSalvos = localStorage.getItem("produtos");
+
+        if (produtosSalvos) {
+            this.produtos = JSON.parse(produtosSalvos);
+        }
+
         this.exibirNaTela();
     }
 
@@ -30,28 +56,28 @@ class Estoque {
 
         resultado.innerHTML = "";
 
-        this.produtos.forEach(produto => {
+        this.produtos.forEach((produto, indice) => {
 
             resultado.innerHTML += `
-            <div class="produto">
-                <p><strong>Nome:</strong> ${produto.nome}</p>
-                <p><strong>Preço:</strong> ${produto.preco}</p>
-                <p><strong>Categoria:</strong> ${produto.categoria}</p>
-                <p><strong>Desconto:</strong> ${produto.desconto}%</p>
+                <div class="produto">
+                    <p><strong>Nome:</strong> ${produto.nome}</p>
+                    <p><strong>Preço:</strong> R$ ${produto.preco.toFixed(2)}</p>
+                    <p><strong>Categoria:</strong> ${produto.categoria}</p>
+                    <p><strong>Desconto:</strong> ${produto.desconto}%</p>
 
-                <button type="button" onclick="estoque.excluirProduto(${this.produtos.indexOf(produto)})">
-                    Excluir
-                </button>
+                    <button type="button" onclick="estoque.excluirProduto(${indice})">
+                        Excluir
+                    </button>
 
-                <hr>
-            </div>
-        `;
+                    <hr>
+                </div>
+            `;
         });
-
     }
 }
 
 const estoque = new Estoque();
+
 const nome = document.querySelector("#nome");
 const preco = document.querySelector("#preco");
 const categoria = document.querySelector("#categoria");
@@ -79,8 +105,6 @@ botaoCadastrar.addEventListener("click", function () {
     );
 
     estoque.adicionarProduto(produto);
-
-    estoque.exibirNaTela();
 
     nome.value = "";
     preco.value = "";
