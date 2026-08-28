@@ -1,0 +1,267 @@
+*{
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background: #f8f0f7;
+
+    color: #000000;
+}
+
+
+/* CABEÇALHO */
+
+header {
+    text-align: center;
+
+    padding: 30px;
+
+    background: #d9a7c7;
+}
+
+
+header h1 {
+    margin: 0;
+
+    font-size: 35px;
+}
+
+
+/* CONTEÚDO PRINCIPAL */
+
+main {
+    display: flex;
+
+    gap: 30px;
+
+    max-width: 1100px;
+
+    margin: 30px auto;
+
+    padding: 20px;
+}
+
+
+/* GUARDA-ROUPA E ÁREA DO LOOK */
+
+.guarda-roupa,
+.area-look {
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    box-shadow: 0 5px 15px rgba(74, 60, 79, 0.947);
+}
+
+/*aeifnkewif*/
+.roupa img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+#carrinho .roupa img {
+    width: 100px;
+    height: 100px;
+}
+/*hfe*/
+
+
+.guarda-roupa {
+    width: 50%;
+}
+
+
+.area-look {
+    width: 50%;
+
+    text-align: center;
+}
+
+
+h2 {
+    text-align: center;
+}
+
+
+/* ROUPAS */
+
+.roupas {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+
+.roupa {
+
+    background: #f3e3ef;
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    cursor: grab;
+
+    font-size: 45px;
+
+    transition: 0.2s;
+}
+
+
+.roupa:hover {
+
+    transform: scale(1.05);
+}
+
+
+.roupa:active {
+
+    cursor: grabbing;
+}
+
+
+.roupa span {
+
+    display: block;
+
+    font-size: 15px;
+
+    margin-top: 8px;
+}
+
+
+/* ÁREA DO LOOK */
+
+#carrinho {
+
+    min-height: 350px;
+
+    border: 3px dashed #c58bb2;
+
+    border-radius: 20px;
+
+    padding: 20px;
+
+    background: #fff9fd;
+}
+
+
+.personagem {
+
+    font-size: 100px;
+
+    margin-bottom: 10px;
+}
+
+
+#mensagem {
+
+    color: #888;
+}
+
+
+/* ROUPAS DENTRO DO LOOK */
+
+#carrinho .roupa {
+
+    display: inline-block;
+
+    margin: 5px;
+
+    padding: 10px;
+
+    font-size: 35px;
+}
+
+
+/* BOTÕES */
+
+.botoes {
+
+    margin-top: 20px;
+
+    display: flex;
+
+    gap: 10px;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+}
+
+
+button {
+
+    border: none;
+
+    padding: 12px 18px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    background: #d9a7c7;
+}
+
+
+button:hover {
+
+    transform: scale(1.05);
+}
+
+
+/* RESULTADO */
+
+#resultado {
+
+    margin-top: 20px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+
+/* RODAPÉ */
+
+footer {
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 800px) {
+
+    main {
+
+        flex-direction: column;
+    }
+
+
+    .guarda-roupa,
+    .area-look {
+
+        width: 100%;
+    }
+
+}

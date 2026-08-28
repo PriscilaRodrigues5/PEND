@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title></title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>✨ Meu Guarda-Roupa ✨</h1>
+        <p>Monte seu look arrastando as peças!</p>
+    </header>
+
+    <main>
+
+        <!-- GUARDA-ROUPA -->
+        <section class="guarda-roupa">
+
+            <h2> Guarda-Roupa</h2>
+
+            <div class="roupas">
+
+                <div class="roupa"
+                    id="camiseta"
+                    draggable="true"
+                    data-tipo="blusa"
+                    data-pontos="10">
+
+                    <img src="imagens/blusa.png" alt="Camiseta">
+                    <span>Camiseta</span>
+
+                </div>
+
+
+                <div class="roupa"
+                    id="calca"
+                    draggable="true"
+                    data-tipo="calca"
+                    data-pontos="10">
+
+                    <img src="imagens/calca.png" alt="Calca">
+                    <span>Calça</span>
+
+                </div>
+
+
+                <div class="roupa"
+                    id="vestido"
+                    draggable="true"
+                    data-tipo="vestido"
+                    data-pontos="15">
+
+                     <img src="imagens/vestido.png" alt="Vestido">
+                    <span>Vestido</span>
+
+                </div>
+
+
+                <div class="roupa"
+                    id="jaqueta"
+                    draggable="true"
+                    data-tipo="jaqueta"
+                    data-pontos="15">
+
+                     <img src="imagens/jaqueta.png" alt="Jaqueta">
+                    <span>Jaqueta</span>
+
+                </div>
+
+
+                <div class="roupa"
+                    id="tenis"
+                    draggable="true"
+                    data-tipo="calcado"
+                    data-pontos="10">
+
+                     <img src="imagens/tenis.png" alt="Tenis">
+                    <span>Tênis</span>
+
+                </div>
+
+
+                <div class="roupa"
+                    id="salto"
+                    draggable="true"
+                    data-tipo="calcado"
+                    data-pontos="15">
+
+                     <img src="imagens/salto.png" alt="Salto">
+                    <span>Salto</span>
+
+                </div>
+
+
+                <div class="roupa"
+                    id="bone"
+                    draggable="true"
+                    data-tipo="acessorio"
+                    data-pontos="5">
+
+                    <img src="imagens/bone.png" alt="Bone">
+                    <span>Boné</span>
+
+                </div>
+
+
+                <div class="roupa"
+                    id="bolsa"
+                    draggable="true"
+                    data-tipo="acessorio"
+                    data-pontos="10">
+
+                    <img src="imagens/bolsa.png" alt="Bolsa">
+                    <span>Bolsa</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ÁREA DO LOOK -->
+
+        <section class="area-look">
+
+            <h2> Meu Look</h2>
+
+            <div id="carrinho">
+
+                <div class="personagem">
+                   🧍‍♀️
+                </div>
+
+                <p id="mensagem">
+                    Arraste suas roupas para cá!
+                </p>
+
+            </div>
+
+
+            <div class="botoes">
+
+                <button id="inspiracao">
+                    💡 Inspiração
+                </button>
+
+                <button id="avaliar">
+                    ⭐ Avaliar Look
+                </button>
+
+                <button id="limpar">
+                    🗑️ Limpar
+                </button>
+
+            </div>
+
+
+            <div id="resultado"></div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            ✨ Monte seu estilo! ✨
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
