@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "nome": "Feira de Tecnologia SENAI",
+    "data": "2026-10-05",
+    "local": "Auditório Principal",
+    "categoria": "Tecnologia",
+    "descricao": "Exposição de projetos dos alunos dos cursos técnicos e de programação."
+  },
+  {
+    "id": 2,
+    "nome": "Semana da Programação Front-End",
+    "data": "2026-10-12",
+    "local": "Laboratório de Informática 2",
+    "categoria": "Curso",
+    "descricao": "Oficinas práticas de HTML, CSS, JavaScript e consumo de APIs."
+  },
+  {
+    "id": 3,
+    "nome": "Palestra: Carreira em TI",
+    "data": "2026-11-03",
+    "local": "Sala de Conferências",
+    "categoria": "Palestra",
+    "descricao": "Profissionais da área contam suas experiências e dão dicas para quem está iniciando."
+  },
+  {
+    "id": 4,
+    "nome": "Hackathon SENAI 2026",
+    "data": "2026-11-20",
+    "local": "Bloco B - Salas Integradas",
+    "categoria": "Competição",
+    "descricao": "Maratona de programação em equipes para resolver desafios reais em 24 horas."
+  },
+  {
+    "id": 5,
+    "nome": "Entrega de Certificados",
+    "data": "2026-12-10",
+    "local": "Auditório Principal",
+    "categoria": "Formatura",
+    "descricao": "Cerimônia de encerramento do curso com entrega de certificados aos formandos."
+  }
+]

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Geolocalização e Câmera</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Geolocalização e Câmera</h1>
+        <p>Atividade Prática - PEND API</p>
+    </header>
+
+    <main>
+
+        <!-- GEOLocalização -->
+        <section class="card">
+
+            <h2>Geolocalização</h2>
+
+            <p>Clique no botão para obter sua localização.</p>
+
+            <button onclick="obterLocalizacao()">
+                Obter Localização
+            </button>
+
+            <div class="resultado">
+
+                <p>
+                    <strong>Latitude:</strong>
+                    <span id="latitude">---</span>
+                </p>
+
+                <p>
+                    <strong>Longitude:</strong>
+                    <span id="longitude">---</span>
+                </p>
+
+                <p>
+                    <strong>Precisão:</strong>
+                    <span id="precisao">---</span>
+                </p>
+
+            </div>
+
+            <p id="mensagem"></p>
+
+        </section>
+
+
+        <!-- CÂMERA -->
+        <section class="card">
+
+            <h2>Câmera</h2>
+
+            <p>Permita o acesso à câmera para visualizar a imagem.</p>
+
+            <video id="camera" autoplay></video>
+
+            <div class="botoes">
+
+                <button onclick="abrirCamera()">
+                    Ativar Câmera
+                </button>
+
+                <button onclick="pararCamera()" class="parar">
+                    Parar Câmera
+                </button>
+
+                <button id="botao" onclick="tirarFoto()">
+                    Tirar Foto
+                </button>
+
+            </div>
+
+            <!-- Canvas fica oculto e serve para capturar a imagem -->
+            <canvas id="canvas"></canvas>
+
+            <!-- A foto tirada aparece aqui -->
+            <div class="area-foto">
+                <img id="foto">
+            </div>
+
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>Atividade Prática - Geolocation e Câmera</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

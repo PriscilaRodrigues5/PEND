@@ -1,0 +1,269 @@
+/* ===================================
+   Estilo geral da página
+=================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f2f2f2;
+  color: #222;
+}
+
+header {
+  background-color: #2b3a67;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+  background-color: #2b3a67;
+  color: #fff;
+  font-size: 14px;
+}
+
+footer a {
+  color: #ffd23f;
+}
+
+/* ===================================
+   Bloco da API interna
+=================================== */
+.bloco-api {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+  border-left: 5px solid #588157;
+}
+
+.descricao-api {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.titulo-secao {
+  margin: 25px 0 10px;
+  font-size: 18px;
+}
+
+.separador {
+  border: none;
+  border-top: 2px dashed #ccc;
+  margin: 25px 0;
+}
+
+.card-evento.interno {
+  border-left-color: #588157;
+}
+
+.card-evento .categoria {
+  display: inline-block;
+  background-color: #d8f3dc;
+  color: #2d6a4f;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-bottom: 6px;
+  width: fit-content;
+}
+
+.card-evento .local {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+/* ===================================
+   Área de filtros (país e ano)
+=================================== */
+.filtros {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+
+.filtros h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.campo {
+  margin-bottom: 10px;
+}
+
+.campo label {
+  display: inline-block;
+  width: 60px;
+  font-weight: bold;
+}
+
+select, input[type="text"] {
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+button {
+  background-color: #2b3a67;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+button:hover {
+  background-color: #1c2748;
+}
+
+/* ===================================
+   Ferramentas (pesquisa e ordenar)
+=================================== */
+.ferramentas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.ferramentas input {
+  flex: 1;
+  min-width: 150px;
+}
+
+#contador {
+  font-size: 13px;
+  color: #555;
+}
+
+/* ===================================
+   Mensagens (carregando / erro)
+=================================== */
+#mensagem {
+  text-align: center;
+  color: #555;
+  margin: 10px 0;
+}
+
+/* ===================================
+   Lista de eventos (cards)
+=================================== */
+.lista-eventos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.card-evento {
+  background-color: #fff;
+  border-left: 5px solid #2b3a67;
+  border-radius: 6px;
+  padding: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-evento h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.card-evento .data {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 4px;
+}
+
+.card-evento .tipo {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 8px;
+}
+
+.card-evento button {
+  align-self: flex-start;
+  font-size: 13px;
+  padding: 5px 10px;
+}
+
+.btn-favoritar {
+  background-color: #ffb703;
+  color: #222;
+}
+
+.btn-favoritar:hover {
+  background-color: #e6a300;
+}
+
+.btn-remover {
+  background-color: #c1121f;
+}
+
+.btn-remover:hover {
+  background-color: #970a12;
+}
+
+/* ===================================
+   Área de favoritos
+=================================== */
+.favoritos {
+  margin-top: 30px;
+}
+
+.favoritos h2 {
+  margin-bottom: 10px;
+}
+
+#semFavoritos {
+  color: #777;
+  font-size: 14px;
+}
+
+/* ===================================
+   Responsivo - telas menores
+=================================== */
+@media (max-width: 600px) {
+  .campo label {
+    width: auto;
+    display: block;
+    margin-bottom: 3px;
+  }
+
+  select, input[type="text"], button {
+    width: 100%;
+  }
+
+  .ferramentas {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

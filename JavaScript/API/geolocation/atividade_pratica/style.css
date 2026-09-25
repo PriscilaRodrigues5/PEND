@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3eef4;
+    color: white;
+}
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    background-color: #b271bbb6;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+/* =========================
+   CONTEÚDO PRINCIPAL
+========================= */
+
+main {
+    width: 95%;
+    max-width: 1400px;
+    margin: 40px auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+    background-color: #242424;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    border-top: 5px solid #b306e3be;
+
+    box-shadow: 0 5px 15px rgba(168, 59, 159, 0.4);
+
+    min-height: 450px;
+}
+
+.card h2 {
+    color: #d06fed;
+    margin-bottom: 15px;
+}
+
+.card p {
+    margin-bottom: 15px;
+}
+
+/* =========================
+   BOTÕES
+========================= */
+
+button {
+    background-color: #b084bad8;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #8800b9;
+}
+
+/* =========================
+   GEOLOCALIZAÇÃO
+========================= */
+
+.resultado {
+    margin-top: 25px;
+
+    padding: 15px;
+
+    background-color: #936ba5;
+
+    border-radius: 8px;
+}
+
+.resultado p {
+    margin-bottom: 10px;
+}
+
+.resultado span {
+    color: #00d9ff;
+}
+
+#mensagem {
+    margin-top: 15px;
+
+    color: #a84ad0;
+}
+
+/* =========================
+   CÂMERA
+========================= */
+
+video {
+    width: 100%;
+    height: 280px;
+
+    background-color: #000;
+
+    border-radius: 8px;
+
+    object-fit: cover;
+
+    margin-top: 10px;
+}
+
+/* =========================
+   BOTÕES DA CÂMERA
+========================= */
+
+.botoes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.botoes button {
+    margin: 0;
+    min-height: 65px;
+
+    padding: 12px 10px;
+
+    background: linear-gradient(135deg, #b084ba, #9563a5);
+
+    color: white;
+    border: none;
+    border-radius: 10px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.botoes button:hover {
+    background: linear-gradient(135deg, #c18bc9, #a96bb8);
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 15px rgba(168, 59, 159, 0.35);
+}
+
+.botoes button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   CANVAS
+========================= */
+
+/* Canvas é usado somente para capturar a foto */
+#canvas {
+    display: none;
+}
+
+
+/* =========================
+   FOTO CAPTURADA
+========================= */
+
+.area-foto {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#foto {
+    display: block;
+
+    width: 100%;
+    height: 280px;
+
+    object-fit: cover;
+
+    background-color: #111;
+
+    border: 2px solid #b084ba;
+    border-radius: 10px;
+
+    box-shadow: 0 5px 15px rgba(168, 59, 159, 0.35);
+}
+
+
+/* BOTÃO PARAR */
+
+.parar {
+    background-color: #b084bad8;
+}
+
+.parar:hover {
+    background-color: #7e3096;
+}
+
+/* =========================
+   FOTO
+========================= */
+
+#foto {
+    display: block;
+
+    width: 100%;
+    height: 280px;
+
+    margin-top: 20px;
+
+    border-radius: 8px;
+
+    border: 3px solid #b084bad8;
+
+    object-fit: cover;
+
+    box-shadow: 0 5px 15px rgba(168, 59, 159, 0.4);
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 30px;
+
+    background-color: #111;
+
+    color: #aaa;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 900px) {
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .botoes {
+        flex-direction: column;
+    }
+
+    .botoes button {
+        width: 100%;
+    }
+}

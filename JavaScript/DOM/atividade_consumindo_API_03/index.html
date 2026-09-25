@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meus Eventos - Situação de Aprendizagem 03</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://date.nager.at/" target="_blank">
+  <linl rel="stylesheet" href="evento_externo.json">
+</head>
+<body>
+
+  <!-- Cabeçalho da página -->
+  <header>
+    <h1> Meus Eventos</h1>
+    <p>Projeto da Situação de Aprendizagem 03 </p>
+  </header>
+
+  <main>
+
+    <!-- =========================================================
+         API INTERNA
+         Aqui os eventos vêm de um arquivo JSON local
+         (eventos-internos.json), simulando um backend próprio
+         da instituição, como se fosse um banco de dados interno.
+    ========================================================= -->
+    <section class="bloco-api">
+      <h2> Eventos internos (API interna - SENAI)</h2>
+      <p class="descricao-api">Dados vindos do nosso próprio arquivo de eventos (eventos-internos.json).</p>
+      <div id="listaEventosInternos" class="lista-eventos"></div>
+    </section>
+
+    <hr class="separador">
+
+    <!-- =========================================================
+         API EXTERNA
+         Aqui os eventos vêm da API pública Nager.Date
+         (feriados de qualquer país do mundo).
+    ========================================================= -->
+    <h2 class="titulo-secao"> Eventos externos</h2>
+
+    <!-- Área para escolher o país e o ano -->
+    <section class="filtros">
+      <h2>Buscar eventos (feriados) de um país</h2>
+
+      <div class="campo">
+        <label for="pais">País:</label>
+        <select id="pais">
+          <option value="">Carregando países...</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="ano">Ano:</label>
+        <select id="ano"></select>
+      </div>
+
+      <button id="btnBuscar">Buscar eventos</button>
+    </section>
+
+    <!-- Campo de pesquisa e ordenação -->
+    <section class="ferramentas" id="ferramentas" style="display:none;">
+      <input type="text" id="pesquisa" placeholder="Pesquisar evento pelo nome...">
+
+      <select id="ordenar">
+        <option value="data">Ordenar por data</option>
+        <option value="nome">Ordenar por nome</option>
+      </select>
+
+      <span id="contador">0 eventos encontrados</span>
+    </section>
+
+    <!-- Mensagem de carregando / erro -->
+    <p id="mensagem"></p>
+
+    <!-- Lista de eventos (cards) vai aparecer aqui -->
+    <section id="listaEventos" class="lista-eventos"></section>
+
+    <!-- Área dos favoritos -->
+    <section class="favoritos">
+      <h2> Meus favoritos</h2>
+      <div id="listaFavoritos" class="lista-eventos"></div>
+      <p id="semFavoritos">Você ainda não adicionou nenhum evento aos favoritos.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>EVENTOS</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

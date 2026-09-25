@@ -1,0 +1,330 @@
+/* =========================
+   CORES
+========================= */
+
+:root {
+    --roxo-escuro: #1a0b2e;
+    --roxo-fundo: #150822;
+    --roxo: #8b5cf6;
+    --roxo-claro: #b794f6;
+    --branco: #f5f2fa;
+    --texto: #b6a4d9;
+}
+
+
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: var(--branco);
+
+    background: linear-gradient(
+        180deg,
+        var(--roxo-escuro),
+        var(--roxo-fundo)
+    );
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.logo {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--roxo-claro);
+}
+
+header p {
+    margin-top: 8px;
+    color: var(--texto);
+}
+
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+/* =========================
+   PESQUISA
+========================= */
+
+.pesquisa {
+    text-align: center;
+}
+
+.pesquisa h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+
+/* =========================
+   BARRA DE PESQUISA
+========================= */
+
+.barra-pesquisa {
+    display: flex;
+    gap: 10px;
+
+    padding: 8px;
+
+    border: 1px solid rgba(183, 148, 246, 0.3);
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.05);
+}
+
+#campoBusca {
+    flex: 1;
+
+    padding: 14px;
+
+    border: none;
+    outline: none;
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: var(--branco);
+
+    font-size: 16px;
+}
+
+#campoBusca::placeholder {
+    color: var(--texto);
+}
+
+
+/* =========================
+   BOTÃO
+========================= */
+
+#btnBuscar {
+    padding: 0 22px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: var(--roxo);
+
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+#btnBuscar:hover {
+    background: var(--roxo-claro);
+    color: var(--roxo-escuro);
+}
+
+
+/* =========================
+   RESULTADOS
+========================= */
+
+.resultado {
+    margin-top: 40px;
+}
+
+.resultado h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+
+/* =========================
+   FILMES
+========================= */
+
+.filmes {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 10px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.filme-card {
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    background: #221139;
+
+    border: 1px solid rgba(183, 148, 246, 0.2);
+}
+
+
+/* =========================
+   IMAGEM DO FILME
+========================= */
+
+.filme-card img,
+.filme-card__poster {
+    width: 10%;
+
+    /* IMAGEM MENOR */
+    height: 20px;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =========================
+   INFORMAÇÕES
+========================= */
+
+.filme-card__corpo {
+    padding: 15px;
+}
+
+.filme-card__titulo {
+    margin-bottom: 8px;
+
+    font-size: 18px;
+}
+
+.filme-card__info {
+    margin-bottom: 10px;
+
+    color: var(--roxo-claro);
+
+    font-size: 10px;
+}
+
+.filme-card__sinopse {
+    color: var(--texto);
+
+    font-size: 14px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================
+   MENSAGEM
+========================= */
+
+.mensagem {
+    margin-top: 20px;
+
+    text-align: center;
+
+    color: var(--texto);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 800px) {
+
+    .filmes {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .barra-pesquisa {
+        flex-direction: column;
+    }
+
+    #btnBuscar {
+        height: 45px;
+    }
+
+    .filmes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .filme-card img,
+    .filme-card__poster {
+        height: 200px;
+    }
+
+}
+
+
+/* =========================
+   CELULAR PEQUENO
+========================= */
+
+@media (max-width: 400px) {
+
+    .filmes {
+        grid-template-columns: 1fr;
+    }
+
+    .filme-card img,
+    .filme-card__poster {
+        height: 250px;
+    }
+
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    margin-top: 50px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(183, 148, 246, 0.15);
+
+    color: var(--texto);
+}
+
+footer strong {
+    color: var(--roxo-claro);
+}
