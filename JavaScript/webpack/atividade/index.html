@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lista de Músicas</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background-color: white;
+            width: 90%;
+            max-width: 500px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #6a1b9a;
+            margin-bottom: 25px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            background-color: #f3e5f5;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            color: #333;
+            font-size: 17px;
+        }
+
+        li:hover {
+            background-color: #e1bee7;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🎵 Minha Lista de Músicas</h1>
+
+        <ul id="listaMusicas"></ul>
+
+    </div>
+
+    <script src="dist/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "pend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PriscilaRodrigues5/PEND.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/PriscilaRodrigues5/PEND/issues"
+  },
+  "homepage": "https://github.com/PriscilaRodrigues5/PEND#readme"
+}
